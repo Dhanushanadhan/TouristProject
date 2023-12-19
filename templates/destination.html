@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destinations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/destinations.css') }}">
+</head>
+<body>
+    <nav>
+        <li><a href="{{url_for('home')}}">Logout</a></li>
+        <li><a href="{{url_for('my_orders')}}">MyBookings</a></li>
+
+    </nav>
+    <h1>Welcome To Tourist Management System {{ user_name }} !!</h1>
+    <h2>Destinations</h2>
+    <form method="POST" action="/user_page" id="destinationForm">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Destination ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Cost per Day</th>
+                    <th>Number of Days</th>
+                    <th>Number of People</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, destination in enumerate(destinations) %}
+                <tr>
+                    <!-- Table rows -->
+                    <td>{{ destination[0] }}</td>
+                    <td>{{ destination[1] }}</td>
+                    <td>{{ destination[2] }}</td>
+                    <td>{{ destination[3] }}</td>
+                    <td>{{ destination[4] }}</td>
+                    <td>{{ destination[5] }}</td>
+                    <td>
+                        <input type="hidden" name="destination_name_{{ index }}" value="{{ destination[1] }}">
+                        <input type="hidden" name="destination_id_{{ index }}" value="{{ destination[0] }}">
+                        <input type="hidden" name="cost_per_day_{{ index }}" value="{{ destination[5] }}">
+                        <input type="number" name="days_{{ index }}" min="1">
+                    </td>
+                    <td>
+                        <input type="number" name="people_{{ index }}" min="1">
+                    </td>
+                    <td>
+                        <button type="button" onclick="selectRow({{ index }})">Select</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <input type="hidden" name="selected_row" id="selectedRow">
+        <input type="submit" style="display: none;">
+    </form>
+
+    <script>
+        function selectRow(index) {
+            document.getElementById('selectedRow').value = index;
+            document.getElementById('destinationForm').submit();
+        }
+    </script>
+</body>
+</html>

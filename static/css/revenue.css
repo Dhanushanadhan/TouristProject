@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #E0F7FA; /* Light cyan background color */
+    color: #000; /* Black text color */
+}
+
+nav {
+    background-color: #00ACC1; /* Cyan background color for the navigation */
+    padding: 10px; /* Padding around navigation */
+}
+
+nav li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 10px; /* Spacing between nav items */
+}
+
+nav a {
+    color: white; /* Text color for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 12px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #0097A7; /* Darker shade on hover */
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.date-form {
+    width: 60%;
+    padding: 20px;
+    background-color: #FFF; /* White background color for the form */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ACC1; /* Cyan text color */
+}
+
+.date-container {
+    margin-bottom: 20px;
+}
+
+.date-container h2 {
+    color: #00ACC1; /* Cyan text color for date titles */
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group input,
+.input-group select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #B2EBF2; /* Light cyan border color */
+    width: calc(33% - 10px); /* Adjust width for each input */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #00ACC1; /* Cyan border color on focus */
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #00ACC1; /* Cyan button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0097A7; /* Darker shade of cyan on hover */
+}

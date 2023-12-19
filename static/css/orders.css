@@ -1,0 +1,82 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Page title style */
+.page-title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Booking details style */
+.booking-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.booking-details p {
+    margin-bottom: 10px;
+}
+
+.detail-label {
+    font-weight: bold;
+    width: 150px;
+    display: inline-block;
+}
+
+.detail-value {
+    margin-left: 10px;
+}
+
+
+
+
+
+/* Style for No Booking Details */
+.no-booking {
+    margin-top: 40px;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}

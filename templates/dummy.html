@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourist Booking Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/orders.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1><a href="{{ url_for('my_orders') }}">Back</a></h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% if results %}
+            <h1 class="page-title">Tourist Booking Details</h1>
+            {% for row in results %}
+            <div class="booking-details">
+                <p>
+                    <span class="detail-label">Booking ID:</span>
+                    <span class="detail-value">{{ row[0] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Name:</span>
+                    <span class="detail-value">{{ row[1] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Email:</span>
+                    <span class="detail-value">{{ row[2] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Phone Number:</span>
+                    <span class="detail-value">{{ row[3] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Nationality:</span>
+                    <span class="detail-value">{{ row[4] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Address:</span>
+                    <span class="detail-value">{{ row[5] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Destination Name:</span>
+                    <span class="detail-value">{{ row[6] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Check-in Date:</span>
+                    <span class="detail-value">{{ row[7] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Check-out Date:</span>
+                    <span class="detail-value">{{ row[8] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Total Cost:</span>
+                    <span class="detail-value">{{ row[9] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Number of People:</span>
+                    <span class="detail-value">{{ row[10] }}</span>
+                </p>
+                <p>
+                    <span class="detail-label">Number of Days:</span>
+                    <span class="detail-value">{{ row[11] }}</span>
+                </p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <h1 class="no-booking">No Booking Details</h1>
+        {% endif %}
+    </div>
+</body>
+</html>

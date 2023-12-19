@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date Range and Number Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/revenue.css') }}">
+</head>
+<body>
+    <nav>
+        <li><a href="{{url_for('admin_panel')}}">Home</a></li>
+    </nav>
+    <div class="grid-container">
+        <form id="dateForm" action="/show_revenue_date" method="post" class="date-form">
+            <h2 class="form-title">Calculate Revenue</h2>
+            <div class="date-container">
+                <h2>Start Date</h2>
+                <div class="input-group">
+                    <input type="number" id="startDay" name="startDay" min="1" max="31" placeholder="Day" required>
+                    <select id="startMonth" name="startMonth" required>
+                        <option value="JAN">January</option>
+                        <option value="FEB">February</option>
+                        <option value="MAR">March</option>
+                        <option value="APR">April</option>
+                        <option value="MAY">May</option>
+                        <option value="JUN">June</option>
+                        <option value="JUL">July</option>
+                        <option value="AUG">August</option>
+                        <option value="SEP">September</option>
+                        <option value="OCT">October</option>
+                        <option value="NOV">November</option>
+                        <option value="DEC">December</option>
+                    </select>
+                    <input type="number" id="startYear" name="startYear" min="1900" max="2100" placeholder="Year" required>
+                </div>
+            </div>
+            <div class="date-container">
+                <h2>End Date</h2>
+                <div class="input-group">
+                    <input type="number" id="endDay" name="endDay" min="1" max="31" placeholder="Day" required>
+                    <select id="endMonth" name="endMonth" required>
+                        <option value="JAN">January</option>
+                        <option value="FEB">February</option>
+                        <option value="MAR">March</option>
+                        <option value="APR">April</option>
+                        <option value="MAY">May</option>
+                        <option value="JUN">June</option>
+                        <option value="JUL">July</option>
+                        <option value="AUG">August</option>
+                        <option value="SEP">September</option>
+                        <option value="OCT">October</option>
+                        <option value="NOV">November</option>
+                        <option value="DEC">December</option>
+                    </select>
+                    <input type="number" id="endYear" name="endYear" min="1900" max="2100" placeholder="Year" required>
+                </div>
+            </div>
+
+            <input type="hidden" id="date1Input" name="date1">
+            <input type="hidden" id="date2Input" name="date2">
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>

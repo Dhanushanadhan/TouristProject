@@ -1,0 +1,96 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Lighter background color */
+    color: #333;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #00bcd4; /* Cyan theme for navbar */
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f0f0f0; /* Lighter text on hover */
+}
+
+/* Form styles */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #00bcd4; /* Text color */
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form textarea,
+form input[type="number"],
+form input[type="submit"] {
+    width: calc(100% - 22px); /* Adjusting input width to account for padding and border */
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #00bcd4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #00bcd4; /* Darker cyan on hover */
+}
+
+/* Add your CSS styles here */
+.success-message {
+    background-color: #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #b1dfbb;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: none;
+    text-align: center;
+}
+
+.success-message button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+}

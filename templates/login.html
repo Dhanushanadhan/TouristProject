@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_auth.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>User Login</h1>
+        <form method="POST" action="/login">
+            <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+
+            <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+
+            <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+            <input type="submit" value="Login">
+        </form>
+
+        <p>Don't have an account? <a href="{{url_for('signup')}}">Sign Up</a></p>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <div class="alert">
+                <span class="close-btn" onclick="closeFlash(this)">X </span>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endwith %}
+
+    <script>
+        function closeFlash(element) {
+            element.parentElement.style.display = 'none';
+        }
+    </script>
+{% endblock %}

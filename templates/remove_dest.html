@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/remove_dest.css') }}">
+</head>
+<body>
+    <nav>
+      
+        <li><a href="{{url_for('admin_panel')}}">Home</a></li>
+    </nav>
+
+    <form method="POST" action="/remove" id="destinationForm">
+        <h1>Admin Panel to Remove the Destination</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Cost per Day</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="destinationTable">
+                
+                {% for destination in destinations_data %}
+                    <tr>
+                        <td>{{ destination[0] }}</td>
+                        <td>{{ destination[1] }}</td>
+                        <td>{{ destination[2] }}</td>
+                        <td>{{ destination[3] }}</td>
+                        <td>{{ destination[4] }}</td>
+                        <td>{{ destination[5] }}</td>
+                        <td>
+                            <button type="button" onclick="removeDestination('{{ destination[0] }}')">Remove</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+        <input type="hidden" name="selected_row" id="selectedRow">
+        <input type="submit" style="display: none;">
+    </form>
+
+    <script>
+        function removeDestination(destinationId) {
+            window.location.href = '/remove?id=' + destinationId;
+        }
+    </script>
+    
+</body>
+</html>

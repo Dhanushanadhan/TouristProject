@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f7f7;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid   #0097A7; /* Cyan border */
+}
+
+th, td {
+    border: 1px solid  #0097A7; /* Cyan border */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color:  #0097A7; /* Cyan header background */
+    color: #fff; /* White text color */
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 16px;
+    background-color:  #0097A7; /* Cyan button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color:  #0097A7; /* Darker cyan on hover */
+}
+
+
+/* Style for the main heading */
+.main-heading {
+    text-align: center;
+    font-size: 3em; /* Adjust the font size as needed */
+    margin-top: 50px; /* Add margin for spacing */
+    color: #333; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    letter-spacing: 2px; /* Increase letter spacing for emphasis */
+    /* You can add animation or other effects to make it more dynamic */
+    animation: pulse 2s infinite; /* Example of a pulsating effect */
+}
+
+/* Define the pulsating animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+nav {
+    background-color: #00ACC1; /* Cyan background color for the navigation */
+    padding: 10px; /* Padding around navigation */
+    display: flex; /* Use flexbox for positioning */
+    justify-content: left; /* Push items to the right */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Display list items horizontally */
+}
+
+nav a {
+    color: white; /* Text color for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 12px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #0097A7; /* Darker shade on hover */
+}

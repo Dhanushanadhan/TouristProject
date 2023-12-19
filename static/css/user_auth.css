@@ -1,0 +1,78 @@
+/* styles.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background: url('../images/ancient1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container styles */
+.container {
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #d7dadc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Alert styles */
+.alert {
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.alert {
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    max-width: 300px; /* Adjust the width as needed */
+    border: 1px solid #f5c6cb;
+    color:rgb(223, 193, 193);
+    background: rgb(235, 94, 94);
+    text-align: center; /* Center-align the text */
+}
+
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+}

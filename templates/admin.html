@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <nav><li><a href="{{url_for('home')}}">Logout</a></li></nav>
+    <header>
+       
+        <h1>Welcome back to Admin Panel <span id="adminName"></span>!</h1>
+      
+    </header>
+
+    <section class="admin_options">
+        
+        <h2>Admin Options</h2>
+        <div class="options_table">
+            <ul>
+                <li><a href="{{url_for('add_destinations')}}">Add Destination</a></li>
+                <li><a href="{{url_for('remove_destinations')}}">Remove Destinations</a></li>
+                <li><a href="{{url_for('revenue')}}">Calculate Revenue</a></li>
+                <li><a href="{{url_for('tourist_data')}}">Tourist Data</a></li>
+                <li><a href="{{url_for('admin_destinations')}}">Destinations</a></li>
+                <li><a href="{{ url_for('update_destinations') }}">Update Destination</a></li>
+                
+
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

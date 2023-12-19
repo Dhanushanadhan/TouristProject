@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css') }}">
+</head>
+<body>
+    <!-- Button to toggle the dashboard -->
+    <button id="toggleDashboard">Toggle Dashboard</button>
+
+    <!-- The dashboard content -->
+    <div id="dashboard" class="dashboard-container">
+        <h1>Welcome to Dashboard</h1>
+        <p>This is your personalized dashboard content.</p>
+        <!-- Add more dashboard content here based on your application's features -->
+
+        <a href="/logout" class="logout-link">Logout</a>
+    </div>
+
+    <<script>
+        const dashboard = document.getElementById('dashboard');
+        const dashboardShutter = document.getElementById('dashboard-shutter');
+        const dashboardContent = document.getElementById('dashboard-content');
+    
+        dashboardShutter.addEventListener('click', function() {
+            dashboard.classList.toggle('expanded');
+        });
+    </script>
+</body>
+</html>

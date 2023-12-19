@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destinations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/destinations.css') }}">
+</head>
+<body>
+    <nav>
+      
+        <li><a href="{{url_for('admin_panel')}}">Home</a></li>
+    </nav>
+    <h2>Available Destinations Destinations</h2>
+    <form method="POST" action="/user_page" id="destinationForm">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Destination ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Cost per Day</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, destination in enumerate(destinations) %}
+                <tr>
+                    <!-- Table rows -->
+                    <td>{{ destination[0] }}</td>
+                    <td>{{ destination[1] }}</td>
+                    <td>{{ destination[2] }}</td>
+                    <td>{{ destination[3] }}</td>
+                    <td>{{ destination[4] }}</td>
+                    <td>{{ destination[5] }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Details Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/users.css') }}">
+</head>
+
+<body>
+    <h1 class="main-heading">Panel to Fill the Details</h1>
+
+    <div class="container">
+        <div class="destination_data grid-item">
+            <h2>Chosen Destination Information</h2>
+            <div class="info">
+                <p><strong>Destination Name:</strong> {{ destination_name }}</p>
+                <p><strong>Destination Id:</strong> {{ destination_id }}</p>
+                <p><strong>Cost per day:</strong> Rs {{ cost_per_day }}</p>
+                <p><strong>Number of Days:</strong> {{ days }}</p>
+                <p><strong>Number of People:</strong> {{ people }}</p>
+                <p><strong>Total Cost:</strong> Rs {{ cost_per_day | int * days | int * people | int }}</p>
+            </div>
+        </div>
+
+        <div class="user_data grid-item">
+            <h2>User Details</h2>
+            <form action="/bill" method="POST">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="tel" placeholder="Phone Number" name="phone" required>
+                <input type="text" placeholder="Nationality" name="nationality" required>
+                <textarea placeholder="Address" name="address" required></textarea>
+
+                <input type="hidden" name="destination_name" value="{{ destination_name }}">
+                <input type="hidden" name="destination_id" value="{{ destination_id }}">
+                <input type="hidden" name="cost_per_day" value="{{ cost_per_day }}">
+                <input type="hidden" name="days" value="{{ days }}">
+                <input type="hidden" name="people" value="{{ people }}">
+                <input type="hidden" name="total_cost" value="{{ cost_per_day | int * days | int * people | int }}">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

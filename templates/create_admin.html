@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>CreateAdmin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_auth.css') }}">
+{% endblock %}
+
+{% block body %}
+
+  
+
+    <div class="container">
+        <h1>Admin Registration </h1>
+        <form method="POST" action="/admin_signup">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <div class="alert">
+                <span class="close-btn" onclick="closeFlash(this)">&times;</span>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endwith %}
+
+    <script>
+        function closeFlash(element) {
+            element.parentElement.style.display = 'none';
+        }
+    </script>
+       
+
+{% endblock %}

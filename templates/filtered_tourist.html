@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fetch_tourist.css') }}">
+    <title>Filtered Tourist order between {{formatted_start_date}} and {{formatted_end_date}}</title>
+</head>
+<body>
+        
+        <nav>
+            <li><a href="{{url_for('tourist_data')}}">Back</a></li>
+        </nav>
+        <!-- Add your header -->
+        <h2>Filtered Tourists</h2>
+    
+        <!-- Iterate through the fetched tourist data -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Nationality</th>
+                    <th>Address</th>
+                    <th>Destinatioins</th>
+                    <th>In Date</th>
+                    <th>Total Cost(Rs)</th>
+                   
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for tourist in tourists %}
+                <tr>
+                    
+                    <!-- Table rows with tourist information -->
+                    <td>{{ tourist[0] }}</td>
+                    <td>{{ tourist[1] }}</td>
+                    <td>{{ tourist[2] }}</td>
+                    <td>{{ tourist[3] }}</td>
+                    <td>{{ tourist[8] }}</td>
+                    <td>{{ tourist[4]  }}</td>
+                    <td>{{ tourist[5] }}</td>
+                    <td>{{tourist[7]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+</body>
+</html>

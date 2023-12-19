@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/myorders.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="{{ url_for('destinations') }}">Back</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-container">
+        <div class="container">
+            <h1 class="page-title">My Bookings</h1>
+            
+            <form class="booking-form" action="/show_my_orders" method="POST">
+                <input type="text" id="tourist_id" name="TouristID" placeholder="Enter Bookins ID" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

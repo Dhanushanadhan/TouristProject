@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #E0F7FA; /* Light cyan background color */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ACC1; /* Cyan text color */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px solid #0097A7; /* Darker cyan border for table */
+}
+
+th,
+td {
+    border: 1px solid #B2EBF2; /* Light cyan border color */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #B2EBF2; /* Light cyan background for table header */
+    border-bottom: 2px solid #0097A7; /* Darker line for header row */
+}
+
+td {
+    border-bottom: 2px solid #0097A7; /* Darker line for table rows */
+    border-right: 1px solid #0097A7; /* Darker line for table columns */
+}
+
+tr:last-child td {
+    border-bottom: none; /* Removing the bottom border from the last row */
+}
+
+tr td:last-child {
+    border-right: 2px solid #0097A7; /* Darker line for the last column */
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #00ACC1; /* Cyan button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #0097A7; /* Darker shade of cyan on hover */
+}
+
+nav {
+    background-color: #00ACC1; /* Cyan background color for the navigation */
+    padding: 10px; /* Padding around navigation */
+    display: flex; /* Use flexbox for positioning */
+    justify-content: left; /* Push items to the right */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Display list items horizontally */
+}
+
+nav a {
+    color: white; /* Text color for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 12px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #0097A7; /* Darker shade on hover */
+}
